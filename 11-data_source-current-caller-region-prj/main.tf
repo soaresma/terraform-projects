@@ -19,10 +19,7 @@ data "aws_caller_identity" "current" {
 
 data "aws_region" "current" {
   # Retrieve the AWS region of the current caller.
-
-
 }
-
 
 output "current_caller_account_id" {
   # Expose the AWS account ID of the current caller after planning or applying the configuration.
