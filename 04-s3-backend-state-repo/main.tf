@@ -15,12 +15,12 @@ terraform {
     }
   }
 
-  # Store this project's Terraform state remotely in S3.
   backend "s3" {
     bucket = "backend-tfstate-recovery-backup"
     key    = "04-s3-backend-state-repo/terraform.tfstate"
     region = "us-east-1"
   }
+
 }
 
 # Deploy AWS resources in the us-east-1 region.
