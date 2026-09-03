@@ -14,8 +14,8 @@ variable "ec2_instance_type" {
   # Fails plan/apply early with a clear message instead of letting AWS
   # reject an unsupported instance type later.
   validation {
-    condition     = contains(["t2.micro", "t3.micro", "r9g.medium"], var.ec2_instance_type)
-    error_message = "The EC2 instance type must be either 't2.micro', 't3.micro', or 'r9g.medium'."
+    condition     = contains(["t2.micro", "t3.micro", "r9g.medium", "t3.large"], var.ec2_instance_type)
+    error_message = "The EC2 instance type must be either 't2.micro', 't3.micro', 'r9g.medium', or 't3.large'."
   }
 
 }
