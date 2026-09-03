@@ -66,3 +66,19 @@ output "first_name_from_splat" {
 output "roles_from_splat" {
   value = local.roles_from_splat
 }
+
+output "example1" {
+  value = startswith(lower(local.name), "philipe")
+}
+
+output "example2" {
+  value = pow(local.age, 2)
+}
+
+output "example3" {
+  value = yamldecode(file("${path.module}/users.yaml")).users[*].name
+}
+
+output "example4" {
+  value = jsonencode(local.my_object)
+}

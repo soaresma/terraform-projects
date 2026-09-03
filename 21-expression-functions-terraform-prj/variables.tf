@@ -56,6 +56,14 @@ locals {
   roles_from_splat = values(local.user_map2)[*].roles
 }
 
+locals {
+  name = "Philipe Maison"
+  age  = 30
+  my_object = {
+    key_1 = 10
+    key_2 = "my_value"
+  }
+}
 
 # Variable session:
 
