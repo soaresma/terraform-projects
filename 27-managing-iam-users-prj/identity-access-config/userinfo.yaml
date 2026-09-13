@@ -1,0 +1,11 @@
+# Create a list of users with the following attributes:
+# - username: The name of the IAM user.
+# - roles: The list of IAM roles assigned to the user.
+
+users:
+  - username: "alice"
+    roles: ["admin", "developer"]
+  - username: "bob"
+    roles: ["developer"]
+  - username: "carol"
+    roles: ["readonly"]
